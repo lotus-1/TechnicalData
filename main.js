@@ -9,8 +9,7 @@ function getMediaWikiData(event) {
     .then(function(data) {
       console.log(data);
       var resultUrl = data[3][0];
-      // var resultTitle = data[3][0].split('/')[4];
-      var resultTitle = data[0];
+      var resultTitle = data[3][0].split('/')[4];
       document.getElementById("title").textContent = resultTitle;
       document.getElementById("description").textContent = resultUrl;
     })
