@@ -1,5 +1,5 @@
 body{
-  background-image: url('https://freerangestock.com/sample/118159/technology-background--abstract-background--with-copyspace-.jpg');
+  background-image: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/itCjTBE/blue-technical-abstract-motion-design-video-corporate-animation-ultra-hd-4k-3840x2160_hixc_bmw-x_thumbnail-full05.png');
   background-repeat: no-repeat;
   background-origin: fixed;
   background-size: cover;
@@ -12,7 +12,7 @@ body{
   font-family: fantasy;
 }
 .h3{
-  font-size: 50px;
+  font-size: 60px;
   padding: 0.5%;
   font-weight: bold;
   font-family: fantasy;
@@ -23,6 +23,22 @@ body{
   color: #00004d;
   font-weight: bold;
   font-family: fantasy;
+  /*animation: blinker 3s linear infinite;*/
+}
+
+ .h4 {
+   font-size: 50px;
+   font-weight: bold;
+   font-family: fantasy;
+   font-weight: bold;
+   font-style: italic;
+ }
+
+.footer {
+  padding: 5%;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: fantasy;
   animation: blinker 3s linear infinite;
 }
 @keyframes blinker {
@@ -30,28 +46,26 @@ body{
     opacity: 0;
   }
 }
-}
-.form{
-  padding: 5%;
-}
-.footer {
-  padding: 5%;
-  font-size: 30px;
-  font-weight: bold;
-  font-family: fantasy;
-}
+
 .linkOfSearch {
   font-size: 35px;
   font-weight: bold;
   font-family: fantasy;
-  color: #006600;
+  color: #009900;
 }
 .input{
-  width: 600px;
-  height: 40px;
+  box-sizing: border-box;
+  font-size: 30px;
+  text-align: center;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: inherit;
+  margin: 3%;
 }
 button{
   width: 100px;
-  height: 40px;
-  font-size: 30px;
+  height: 45px;
+  font-size: 50px;
+  padding: inherit;
 }
