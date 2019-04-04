@@ -1,6 +1,6 @@
 function getData(event) {
   event.preventDefault();
   getMediaWikiData();
-  getMediaguardianData();
+  getGuardianData();
 }
 document.getElementById("button").addEventListener("click", getData);
