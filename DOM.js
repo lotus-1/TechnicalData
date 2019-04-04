@@ -6,11 +6,29 @@ function resetData () {
   document.getElementById("mediawikiSearch").textContent = "";
   document.getElementById("guardianSearch").textContent = "";
 }
+
 function mediaAttribute (data) {
   document.getElementById("MediaTitle").textContent = "MediaData";
   var wikiData = document.getElementById("mediawikiSearch");
   wikiData.textContent = data[3][0].split("/")[4];
   wikiData.href = data[3][0];
+}
+function getMediaWikiData() {
+  var keyword = document.getElementById("input").value;
+  var searchWikiURL = wikiUrl + keyword;
+  fetch(searchWikiURL)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      mediaAttribute(data);
+    })
+    .catch(function(error) {
+      if (error instanceof TypeError) {
+       document.getElementById("MediaTitle").textContent = "No data Found!";
+        resetData();
+      }
+    })
 }
 
 function guardianAttribute(data) {
@@ -19,24 +37,7 @@ function guardianAttribute(data) {
   guardianData.textContent = data.response.results[0].webTitle;
   guardianData.href = data.response.results[0].webUrl;
   }
- function getMediaWikiData() {
-   var keyword = document.getElementById("input").value;
-   var searchWikiURL = wikiUrl + keyword;
-   fetch(searchWikiURL)
-     .then(function(response) {
-       return response.json();
-     })
-     .then(function(data) {
-       mediaAttribute(data);
-     })
-     .catch(function(error) {
-       if (error instanceof TypeError) {
-         document.getElementById("MediaTitle").textContent = "No data Found!";
-         resetData();
-       }
-     })
- }
- function getMediaguardianData() {
+ function getGuardianData() {
    var guardianKey = document.getElementById("mediawikiSearch").textContent;
    var guardianLink = guardianUrl + guardianKey + guardianUrlKey;
    fetch(guardianLink)
