@@ -23,7 +23,6 @@ body{
   color: #00004d;
   font-weight: bold;
   font-family: fantasy;
-  /*animation: blinker 3s linear infinite;*/
 }
 
  .h4 {
@@ -48,10 +47,10 @@ body{
 }
 
 .linkOfSearch {
-  font-size: 35px;
+  font-size: 40px;
   font-weight: bold;
   font-family: fantasy;
-  color: #009900;
+  color: #003300;
 }
 .input{
   box-sizing: border-box;
